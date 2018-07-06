@@ -21,6 +21,10 @@ public class CallingAppTestActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("maptrip://navigate?latitude=50.738912&longitude=7.106772"));
+
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+
                 startActivity(intent);
 
             }
