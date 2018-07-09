@@ -1,37 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
 
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    
-    
-    <TextView
-        android:id="@+id/status_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/new_destination"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
 
-    <Button android:text="Intent navi lat/lon" android:id="@+id/button_intent_latlon" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent sim lat/lon" android:id="@+id/button_intent_sim_latlon" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent navi followme" android:id="@+id/button_intent_navi_followme" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent sim followme" android:id="@+id/button_intent_sim_followme" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent navi refroute" android:id="@+id/button_intent_navi_refroute" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent sim refroute" android:id="@+id/button_intent_sim_refroute" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent navi multistop" android:id="@+id/button_intent_navi_multistop" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <Button android:text="Intent sim address" android:id="@+id/button_intent_sim_address" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+        <TextView
+            android:id="@+id/status_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/new_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_intent_latlon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent navi lat/lon"></Button>
+
+        <Button
+            android:id="@+id/button_intent_sim_latlon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent sim lat/lon"></Button>
+
+        <Button
+            android:id="@+id/button_intent_navi_followme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent navi followme"></Button>
+
+        <Button
+            android:id="@+id/button_intent_sim_followme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent sim followme"></Button>
+
+        <Button
+            android:id="@+id/button_intent_navi_refroute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent navi refroute"></Button>
+
+        <Button
+            android:id="@+id/button_intent_sim_refroute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent sim refroute"></Button>
+
+        <Button
+            android:id="@+id/button_intent_navi_multistop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent navi multistop"></Button>
+
+        <Button
+            android:id="@+id/button_intent_sim_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent sim address"></Button>
+
+        <Button
+            android:id="@+id/button_intent_latlon_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent navi lat/lon SERVICE"></Button>
+
+
+    </LinearLayout>
 </ScrollView>

@@ -111,9 +111,27 @@ public class CallingAppTestActivity extends Activity {
             }
         });
 
+        button = (Button) findViewById(R.id.button_intent_latlon_service);
+        button.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService("maptrip://navigate?latitude=50.738912&longitude=7.106772");
+            }
+        });
+
 
     }
 
+    /**
+     * start service and pass uri to be executed by service class
+     */
+    private void startService(String uri) {
+        Intent intent = new Intent(this, TestService.class);
+
+        intent.putExtra(TestService.EXTRA_URI, uri);
+
+        startService(intent);
+    }
 
 }
 
