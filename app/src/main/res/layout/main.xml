@@ -67,12 +67,6 @@
             android:layout_height="wrap_content"
             android:text="Intent sim address"></Button>
 
-        <Button
-            android:id="@+id/button_intent_latlon_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Intent navi lat/lon SERVICE"></Button>
-
 
     </LinearLayout>
 </ScrollView>
