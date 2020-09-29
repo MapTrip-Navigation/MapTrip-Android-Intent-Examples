@@ -37,4 +37,4 @@ Type of the route file. The following parameters are possible:
 
 Please find example route files within the *example_data* folder of this project.
 ## Start of a multi-stopp navigation (up to 10 intermediate destinations) ##
-*maptrip://navigate?posx0=50.2374&posy0=7.123423& posx1=50.2374&posy1=7.123423..&posx9=50.2374&posy9=7.123423*
+*maptrip://navigate?posx0=50.2374&posy0=7.123423&posx1=50.2374&posy1=7.123423..&posx9=50.2374&posy9=7.123423*
