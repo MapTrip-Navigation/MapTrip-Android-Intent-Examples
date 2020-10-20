@@ -43,7 +43,7 @@ public class CallingAppTestActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://navigate?route=" + Environment.getExternalStorageDirectory()
-                                + "/maptrip/user/routes/fmr_schweinheim_total.nmea&type=followme"));
+                                + "/maptrip/user/routes/followme_bonn.nmea&type=followme"));
                 startActivity(intent);
 
             }
@@ -55,7 +55,7 @@ public class CallingAppTestActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://simulate?route=" + Environment.getExternalStorageDirectory()
-                                + "/maptrip/user/routes/fmr_schweinheim_total.nmea&type=followme"));
+                                + "/maptrip/user/routes/followme_bonn.nmea&type=followme"));
                 startActivity(intent);
 
             }
