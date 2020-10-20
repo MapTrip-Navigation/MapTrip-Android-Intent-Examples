@@ -14,7 +14,7 @@ startActivity(intent);
 ```
 
 ## Start of a navigation with a WGS84 coordinate ##
-*maptrip://navigate?latitude=7.123423&longitude=50.1279*
+*maptrip://navigate?latitude=50.1279&longitude=7.123423*
 ## Start of a navigation with an address ##
 *maptrip://navigate?country=DEU&city=Bonn&zip=53175&street=Riemenschneiderstr&houseno=11*
 
@@ -22,7 +22,7 @@ The abbreviation of street names (e.g. Riemenschneiderstr) is possible. The dot 
 ## Start of a simulation ##
 Each navigation can also be simulated by using *simulate* instead of *navigate*, e.g.:
 
-*maptrip://simulate?latitude=7.123423&longitude=50.1279*
+*maptrip://simulate?latitude=50.1279&longitude=7.123423*
 ## Start of a route ##
 *maptrip://navigate?route=<path_url_encoded>&type=*
 
