@@ -1,7 +1,7 @@
 # MapTrip Android Intent interface #
 
 The MapTrip intent interface for Android is available since MapTrip 4.1 and offers extended possibilities when starting [MapTrip](https://maptrip.de). The purpose of this project is to provide examples how to start different types of route guidance in MapTrip from your own application.
-This also means that more control options are also available in WebApps. Especially routes (like FollowMe or Reference Routes) can be started easily.
+This also means that more control options are also available in WebApps. Especially routes (like FollowMe or Reference routes) can be started easily.
 
 ## Requirements ##
 
@@ -31,10 +31,10 @@ possible types: refroute, followme, maptrip
 The absolute path (URL encoded) must be passed to the file.
 ### Parameter type: ###
 Type of the route file. The following parameters are possible:
--	refroute    -  for a reference route
--	followme   -  for a followme route
+-	refroute    -  for a Reference route
+-	followme   -  for a FollowMe route
 -	maptrip   -   for a MapTrip tour file (XML)
 
-Please find example route files within the *example_data* folder of this project.
+Please find example route files within the *intent_example_data* folder of this project.
 ## Start of a multi-stopp navigation (up to 10 intermediate destinations) ##
 *maptrip://navigate?posx0=50.2374&posy0=7.123423&posx1=50.2374&posy1=7.123423..&posx9=50.2374&posy9=7.123423*

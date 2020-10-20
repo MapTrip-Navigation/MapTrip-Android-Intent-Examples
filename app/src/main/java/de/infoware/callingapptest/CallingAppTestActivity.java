@@ -15,95 +15,88 @@ public class CallingAppTestActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        Button button = (Button) findViewById(R.id.button_intent_latlon);
+        Button button = findViewById(R.id.button_intent_latlon);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("maptrip://navigate?latitude=50.738912&longitude=7.106772"));
                 startActivity(intent);
-
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_sim_latlon);
+        button = findViewById(R.id.button_intent_sim_latlon);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("maptrip://simulate?latitude=50.738912&longitude=7.106772"));
                 startActivity(intent);
-
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_navi_followme);
+        button = findViewById(R.id.button_intent_navi_followme);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://navigate?route=" + Environment.getExternalStorageDirectory()
-                                + "/maptrip/user/routes/followme_bonn.nmea&type=followme"));
+                                + "/intent_example_data/followme_bonn.nmea&type=followme"));
                 startActivity(intent);
-
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_sim_followme);
+        button = findViewById(R.id.button_intent_sim_followme);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://simulate?route=" + Environment.getExternalStorageDirectory()
-                                + "/maptrip/user/routes/followme_bonn.nmea&type=followme"));
+                                + "/intent_example_data/followme_bonn.nmea&type=followme"));
                 startActivity(intent);
-
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_navi_refroute);
+        button = findViewById(R.id.button_intent_navi_refroute);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://navigate?route=" + Environment.getExternalStorageDirectory()
-                                + "/maptrip/user/routes/refRoute_Bonn.nmea&type=refroute"));
+                                + "/intent_example_data/refRoute_Bonn.nmea&type=refroute"));
                 startActivity(intent);
 
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_sim_refroute);
+        button = findViewById(R.id.button_intent_sim_refroute);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://simulate?route=" + Environment.getExternalStorageDirectory()
-                                + "/maptrip/user/routes/refRoute_Bonn.nmea&type=refroute"));
+                                + "/intent_example_data/refRoute_Bonn.nmea&type=refroute"));
                 startActivity(intent);
-
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_navi_multistop);
+        button = findViewById(R.id.button_intent_navi_multistop);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://navigate?posy0=50.738912&posx0=7.106772&posy1=50.825177&posx1=6.975582&posy2=50.846399&posx2=7.096063"));
                 startActivity(intent);
-
             }
         });
 
-        button = (Button) findViewById(R.id.button_intent_sim_address);
+        button = findViewById(R.id.button_intent_sim_address);
         button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                         "maptrip://simulate?city=Bonn&street=Riemenschneiderstr&houseno=11"));
                 startActivity(intent);
-
             }
         });
 
