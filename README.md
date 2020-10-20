@@ -1,4 +1,4 @@
-# MapTrip Android Intent interface #
+# MapTrip Android Intent Examples #
 
 The MapTrip intent interface for Android is available since MapTrip 4.1 and offers extended possibilities when starting [MapTrip](https://maptrip.de). The purpose of this project is to provide examples how to start different types of route guidance in MapTrip from your own application.
 This also means that more control options are also available in WebApps. Especially routes (like FollowMe or Reference routes) can be started easily.
