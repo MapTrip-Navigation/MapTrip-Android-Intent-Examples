@@ -3,6 +3,8 @@
 The MapTrip intent interface for Android is available since MapTrip 4.1 and offers extended possibilities when starting [MapTrip](https://maptrip.de). The purpose of this project is to provide examples how to start different types of route guidance in MapTrip from your own application.
 This also means that more control options are also available in WebApps. Especially routes (like FollowMe or Reference routes) can be started easily.
 
+![](readme_media/main.png)
+
 ## Requirements ##
 
 In order to benefit from this sample application you will need to have a working version of MapTrip on your device. In case you do not have MapTrip yet, do not hesitate to [contact us](https://www.infoware.de/en/contact-us/).
@@ -14,7 +16,7 @@ startActivity(intent);
 ```
 
 ## Start of a navigation with a WGS84 coordinate ##
-*maptrip://navigate?latitude=latitude=50.738912&longitude=7.106772*
+*maptrip://navigate?latitude=50.738912&longitude=7.106772*
 ## Start of a navigation with an address ##
 *maptrip://navigate?country=DEU&city=Bonn&zip=53175&street=Riemenschneiderstr&houseno=11*
 
@@ -22,7 +24,7 @@ The abbreviation of street names (e.g. Riemenschneiderstr) is possible. The dot 
 ## Start of a simulation ##
 Each navigation can also be simulated by using *simulate* instead of *navigate*, e.g.:
 
-*maptrip://simulate?latitude=latitude=50.738912&longitude=7.106772*
+*maptrip://simulate?latitude=50.738912&longitude=7.106772*
 ## Start of a route ##
 *maptrip://navigate?route=<path_url_encoded>&type=*
 
