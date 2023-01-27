@@ -29,6 +29,87 @@ Each navigation can also be simulated by using *simulate* instead of *navigate*,
 *maptrip://navigate?route=<path_url_encoded>&type=*
 
 possible types: refroute, followme, maptrip
+
+## Start of a route file on android 11+ in maptrip 5.5 ##
+
+Since the permission changes in android 11+, a route file has to be transported somewhere inside the maptrip installation folder, 
+because you cant access files outside of the application. 
+
+1.
+In [AndroidManifest.xml](app/src/main/AndroidManifest.xml) add the following inside the application tags:
+
+<application..
+
+<provider
+    android:name="androidx.core.content.FileProvider"
+    android:authorities="de.infoware.callingapptest.fileprovider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" />
+</provider>
+
+..application>
+
+2.
+Create a file inside the res/xml folder named [file_paths.xml](app/src/main/res/xml/file_paths.xml) and add the following
+and replace the package name with your own:
+
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="file" path="Android/data/de.infoware.callingapptest/files/" />
+</paths>
+
+3.
+Add the following dependencies to build.gradle:
+
+implementation 'androidx.core:core:1.3.2'
+implementation 'androidx.activity:activity:1.2.0-alpha06'
+
+4.
+Next we need to implement a FileProvider to create a URI with, 
+which takes 3 arguments the context, authority and a file of the type File, again use the
+appropriate package name.
+
+in Java that could look a little something like this:
+File file = new File(path + "/followme_bonn.nmea");
+Uri fileToUri = FileProvider.getUriForFile(this, "de.infoware.callingapptest.fileprovider", file);
+
+5.
+Then we need to create a IntentBuilder out of the URI we just made like so:
+
+Intent shareIntent = ShareCompat.IntentBuilder.from(this)
+.setStream(fileToUri)
+.getIntent();
+
+this Intent can now be used for multiple purposes.
+
+shareIntent.setData(fileToUri);
+shareIntent.putExtra(Intent.EXTRA_TEXT, "maptrip://navigate?route=followme_bonn.nmea&type=followme");
+shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+shareIntent.setClassName("de.infoware.maptrip.navi.license", "de.infoware.maptrip.StartActivity");
+
+.setData: Set the data to be used with the Intent.
+.putExtraAdding: extra text which maptrip in this case can recognize.
+.addFlags: Grant permissions to the URI without the need of requesting user permissions.
+.setClassName: Set the name of the class that receives the file.
+
+The implementation from this application is now done and a button with a clicklistener can be made to trigger
+this intent like so:
+
+button = findViewById(R.id.button_share_intent_navi_followme);
+button.setOnClickListener(new Button.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(shareIntent);
+    }
+});
+
+
+
+
+
 ### Parameter route: ###
 The absolute path (URL encoded) must be passed to the file.
 ### Parameter type: ###

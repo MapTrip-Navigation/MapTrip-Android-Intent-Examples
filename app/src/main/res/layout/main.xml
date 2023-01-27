@@ -44,6 +44,12 @@
             android:text="Intent sim followme"></Button>
 
         <Button
+            android:id="@+id/button_share_intent_navi_followme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share intent navi followme"></Button>
+
+        <Button
             android:id="@+id/button_intent_navi_refroute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
