@@ -30,7 +30,7 @@ Each navigation can also be simulated by using *simulate* instead of *navigate*,
 
 possible types: refroute, followme, maptrip
 
-### Start of a route file on android 11+ in maptrip 5.5 ###
+### Start of a route file on android 11+ in MapTrip 5.5 ###
 
 Since the permission changes in android 11+, a route file has to be transported somewhere inside the maptrip installation folder, 
 because you cant access files outside of the application. 
@@ -96,10 +96,10 @@ shareIntent.putExtra(Intent.EXTRA_TEXT, "maptrip://navigate?route=followme_bonn.
 shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 shareIntent.setClassName("de.infoware.maptrip.navi.license", "de.infoware.maptrip.StartActivity");
 ```
-.setData: Set the data to be used with the Intent.\
-.putExtraAdding: extra text which maptrip in this case can recognize.\
-.addFlags: Grant permissions to the URI without the need of requesting user permissions.\
-.setClassName: Set the name of the class that receives the file.
+__.setData__ Set the data to be used with the Intent.\
+__.putExtraAdding__ extra text which maptrip in this case can recognize.\
+__.addFlags__ Grant permissions to the URI without the need of requesting user permissions.\
+__.setClassName__ Set the name of the class that receives the file.
 
 The implementation from this application is now done and a button with a clicklistener can be made to trigger
 this intent like so:
