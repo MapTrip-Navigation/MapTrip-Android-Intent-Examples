@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "de.infoware.callingapptest"
@@ -19,11 +18,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-	
- 
-    lintOptions {
+    namespace 'de.infoware.callingapptest'
+    lint {
         abortOnError false
     }
+
+
 }
 
 dependencies {
