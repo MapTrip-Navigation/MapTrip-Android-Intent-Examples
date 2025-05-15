@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MAPTRIPAPI type="route">
+	<ITINERARY name="" id="">
+		<Waypoint id="" state="" district="Alt Engeldorferhof~Zündorf" favoriteTag="" name="" country="deu" houseNo="" street="" aliasName="" city="Köln" zipCode="41539~51469" poiName="" poiIcon="" Projection="WGS84" Longitude="6.959904" Latitude="50.940531" Distance="0" Elevation="0" ViapointRadius="0" options="0" />
+		<Waypoint id="" state="" district="Alt-Godesberg~Ückesdorf" favoriteTag="" name="" country="deu" houseNo="" street="" aliasName="" city="Bonn" zipCode="53111~53757" poiName="" poiIcon="" Projection="WGS84" Longitude="7.096313" Latitude="50.732706" Distance="0" Elevation="0" ViapointRadius="0" options="0" />
+	</ITINERARY>
+</MAPTRIPAPI>
